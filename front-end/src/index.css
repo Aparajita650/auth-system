@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Inter", system-ui, -apple-system, sans-serif;
+	color: #0f172a;
+}
+
+.glass {
+	backdrop-filter: blur(18px);
+}

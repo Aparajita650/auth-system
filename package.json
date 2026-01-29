@@ -1,0 +1,12 @@
+{
+  "name": "login-project",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix back-end start\" \"npm --prefix front-end run dev\"",
+    "install:all": "npm --prefix back-end install && npm --prefix front-end install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
