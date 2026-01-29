@@ -9,18 +9,24 @@
       "src": "front-end/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "front-end/dist"
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "back-end/server.js"
+      "dest": "/back-end/server.js"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "front-end/dist/$1"
+      "dest": "/front-end/dist/$1"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
